@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/24 21:30:18 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/26 10:27:20 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ all: $(NAME)
 $(NAME): $(OBJS) $(STRLEN_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(LIB) $(LIBFT) $(OBJS) $(STRLEN_OBJS) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:

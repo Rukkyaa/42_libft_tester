@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 20:01:04 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/24 21:25:57 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 12:49:06 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	strlen_null_test(void)
 {
-	if (ft_strlen("") == ft_strlen(""))
+	if (ft_strlen("a") == ft_strlen(""))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

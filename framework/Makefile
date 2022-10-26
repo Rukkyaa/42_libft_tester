@@ -6,13 +6,13 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/24 21:18:09 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/26 12:48:01 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libunit.a
 
-SRC = libunit.c 
+SRC = libunit.c libunit_utils.c libunit_print.c
 
 OBJS = ${SRC:.c=.o}
 

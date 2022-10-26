@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:09:23 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/25 09:31:41 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 12:24:29 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ static int	check_result(pid_t pid)
 	{
 		if (pid == 0)
 		{
-			write(1, "OK", 2);
+			ft_putendl(GREEN"OK"RESET);
 			return (1);
 		}
 		else if (pid == 256)
-			write(1, "KO", 2);
+			ft_putendl(RED"KO"RESET);
 	}
 	if (WIFSIGNALED(pid))
 	{
 		if (WTERMSIG(pid) == SIGSEGV)
-			write(1, "[SEGV]", 6);
+			ft_putendl(RED"[SEGV]"RESET);
 		else if (WTERMSIG(pid) == SIGBUS)
-			write(1, "[BUS]", 5);
+			ft_putendl(RED"[BUS]"RESET);
 	}
 	return (0);
 }
@@ -53,7 +53,7 @@ static int	run_test(int (*function)(void))
 	pid = fork();
 	if (pid == -1)
 	{
-		write(1, "Fork error", 10);
+		ft_putendl(RED"[FORK ERROR]"RESET);
 		return (EXIT_FAILURE);
 	}
 	else if (pid == 0)
@@ -74,8 +74,7 @@ void	load_test(t_unit_test **tests, char *name, int (*function)(void))
 	new_test = create_test(name, function);
 	if (!new_test)
 		return ;
-	new_test -> next = *tests;
-	*tests = new_test;
+	ft_testadd_back(tests, new_test);
 }
 
 int	launch_tests(t_unit_test *tests)
@@ -85,6 +84,9 @@ int	launch_tests(t_unit_test *tests)
 	count = 0;
 	while (tests)
 	{
+		ft_print("\t");
+		ft_print(tests->name);
+		ft_print(" : ");
 		count += run_test(tests->function);
 		tests = tests->next;
 	}
