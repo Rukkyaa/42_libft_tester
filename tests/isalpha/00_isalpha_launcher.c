@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_strlen_launcher.c                               :+:      :+:    :+:   */
+/*   00_isalpha_launcher.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:57:06 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 14:59:49 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 15:23:08 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,22 @@
 
 static void	load_tests(t_unit_test **tests)
 {
-	load_test(tests, "BASIC test    ", &strlen_basic_test);
-	load_test(tests, "NULL test     ", &strlen_null_test);
-	load_test(tests, "NULL in string", &strlen_null_in_string_test);
+	load_test(tests, "LOWER START    ", &isalpha_lower_start_test);
+	load_test(tests, "LOWER END      ", &isalpha_lower_end_test);
+	load_test(tests, "LOWER START - 1", &isalpha_lower_start_less_one_test);
+	load_test(tests, "LOWER END + 1  ", &isalpha_lower_end_plus_one_test);
+	load_test(tests, "UPPER START    ", &isalpha_lower_start_test);
+	load_test(tests, "UPPER END      ", &isalpha_lower_end_test);
+	load_test(tests, "UPPER START - 1", &isalpha_lower_start_less_one_test);
+	load_test(tests, "UPPER END + 1  ", &isalpha_lower_end_plus_one_test);
 }
 
-int	strlen_launcher(void)
+int	isalpha_launcher(void)
 {
 	t_unit_test		*tests;
 	unsigned int	res;
 
-	ft_putendl("ft_strlen :");
+	ft_putendl("ft_isalpha :");
 	tests = NULL;
 	load_tests(&tests);
 	res = launch_tests(tests);

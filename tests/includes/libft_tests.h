@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 14:16:06 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 15:38:15 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,20 +16,21 @@
 # include "../../framework/includes/libunit.h"
 # include "../libft/libft.h"
 
-int		strlen_launcher(void);
-int		strlen_basic_test(void);
-int		strlen_null_test(void);
+# include <ctype.h>
 
-/*
-# define RESET "\033[0m"
-# define BLACK "\033[30m"
-# define RED "\033[31m"
-# define GREEN "\033[32m"
-# define YELLOW "\033[93m"
-# define BLUE "\033[34m"
-# define PURPLE "\033[35m"
-# define CYAN "\033[36m"
-# define WHITE "\033[37m"
-*/
+int	strlen_launcher(void);
+int	strlen_basic_test(void);
+int	strlen_null_test(void);
+int	strlen_null_in_string_test(void);
+
+int	isalpha_launcher(void);
+int	isalpha_lower_start_test(void);
+int	isalpha_lower_end_test(void);
+int	isalpha_lower_start_less_one_test(void);
+int	isalpha_lower_end_plus_one_test(void);
+int	isalpha_upper_start_test(void);
+int	isalpha_upper_end_test(void);
+int	isalpha_upper_start_less_one_test(void);
+int	isalpha_upper_end_plus_one_test(void);
 
 #endif
