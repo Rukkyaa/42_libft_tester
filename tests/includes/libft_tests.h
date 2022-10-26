@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 12:20:20 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 14:16:06 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_TESTS_H
 
 # include "../../framework/includes/libunit.h"
-# include "../libft/includes/libft.h"
+# include "../libft/libft.h"
 
 int		strlen_launcher(void);
 int		strlen_basic_test(void);
