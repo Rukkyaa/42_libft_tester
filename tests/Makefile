@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/26 15:37:46 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/26 20:04:41 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,32 @@ ISALPHA_NAME = 00_isalpha_launcher.c \
 ISALPHA = $(addprefix $(ISALPHA_DIR), $(ISALPHA_NAME))
 ISALPHA_OBJS = $(ISALPHA:.c=.o)
 
+ISDIGIT_DIR = ./isdigit/
+ISDIGIT_NAME = 00_isdigit_launcher.c \
+				01_isdigit_smallest_test.c \
+				02_isdigit_biggest_test.c \
+				03_isdigit_smallest_less_one_test.c \
+				04_isdigit_biggest_plus_one_test.c
+ISDIGIT = $(addprefix $(ISDIGIT_DIR), $(ISDIGIT_NAME))
+ISDIGIT_OBJS = $(ISDIGIT:.c=.o)
+
+ISALNUM_DIR = ./isalnum/
+ISALNUM_NAME = 00_isalnum_launcher.c \
+				01_isalnum_lower_start_test.c \
+				02_isalnum_lower_end_test.c \
+				03_isalnum_lower_start_less_one_test.c \
+				04_isalnum_lower_end_plus_one_test.c \
+				05_isalnum_upper_start_test.c \
+				06_isalnum_upper_end_test.c \
+				07_isalnum_upper_start_less_one_test.c \
+				08_isalnum_upper_end_plus_one_test.c \
+				09_isalnum_smallest_test.c \
+				10_isalnum_biggest_test.c \
+				11_isalnum_smallest_less_one_test.c \
+				12_isalnum_biggest_plus_one_test.c
+ISALNUM = $(addprefix $(ISALNUM_DIR), $(ISALNUM_NAME))
+ISALNUM_OBJS = $(ISALNUM:.c=.o)
+
 STRLEN_DIR = ./strlen/
 STRLEN_NAME = 00_strlen_launcher.c \
 				01_strlen_basic_test.c \
@@ -55,16 +81,16 @@ STRLEN_OBJS = $(STRLEN:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(STRLEN_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(STRLEN_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

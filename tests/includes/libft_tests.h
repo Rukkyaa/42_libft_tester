@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 15:38:15 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 20:09:41 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,25 @@ int	isalpha_upper_start_test(void);
 int	isalpha_upper_end_test(void);
 int	isalpha_upper_start_less_one_test(void);
 int	isalpha_upper_end_plus_one_test(void);
+
+int	isdigit_launcher(void);
+int	isdigit_smallest_test(void);
+int	isdigit_biggest_test(void);
+int	isdigit_smallest_less_one_test(void);
+int	isdigit_biggest_plus_one_test(void);
+
+int	isalnum_launcher(void);
+int	isalnum_lower_start_test(void);
+int	isalnum_lower_end_test(void);
+int	isalnum_lower_start_less_one_test(void);
+int	isalnum_lower_end_plus_one_test(void);
+int	isalnum_upper_start_test(void);
+int	isalnum_upper_end_test(void);
+int	isalnum_upper_start_less_one_test(void);
+int	isalnum_upper_end_plus_one_test(void);
+int	isalnum_smallest_test(void);
+int	isalnum_biggest_test(void);
+int	isalnum_smallest_less_one_test(void);
+int	isalnum_biggest_plus_one_test(void);
 
 #endif

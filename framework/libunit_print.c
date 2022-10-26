@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:43:53 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 15:39:15 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 19:29:40 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,6 @@ void	print_res(unsigned int res, t_unit_test *tests)
 	ft_putnbr(res);
 	ft_print("/");
 	ft_putnbr(nb_tests(tests));
-	ft_print(" tests pass\n");
+	ft_print(" tests pass\n\n");
 	ft_print(RESET);
 }
