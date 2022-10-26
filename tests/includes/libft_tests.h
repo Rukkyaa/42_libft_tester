@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 20:09:41 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 22:13:26 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,17 @@ int	isalnum_smallest_test(void);
 int	isalnum_biggest_test(void);
 int	isalnum_smallest_less_one_test(void);
 int	isalnum_biggest_plus_one_test(void);
+
+int	isascii_launcher(void);
+int	isascii_smallest_test(void);
+int	isascii_biggest_test(void);
+int	isascii_smallest_less_one_test(void);
+int	isascii_biggest_plus_one_test(void);
+
+int	isprint_launcher(void);
+int	isprint_smallest_test(void);
+int	isprint_biggest_test(void);
+int	isprint_smallest_less_one_test(void);
+int	isprint_biggest_plus_one_test(void);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/26 20:04:41 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/26 22:15:26 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,26 @@ ISALNUM_NAME = 00_isalnum_launcher.c \
 ISALNUM = $(addprefix $(ISALNUM_DIR), $(ISALNUM_NAME))
 ISALNUM_OBJS = $(ISALNUM:.c=.o)
 
+ISASCII_DIR = ./isascii/
+ISASCII_NAME = 00_isascii_launcher.c \
+				01_isascii_smallest_test.c \
+				02_isascii_biggest_test.c \
+				03_isascii_smallest_less_one_test.c \
+				04_isascii_biggest_plus_one_test.c
+
+ISASCII = $(addprefix $(ISASCII_DIR), $(ISASCII_NAME))
+ISASCII_OBJS = $(ISASCII:.c=.o)
+
+ISPRINT_DIR = ./isprint/
+ISPRINT_NAME = 00_isprint_launcher.c \
+				01_isprint_smallest_test.c \
+				02_isprint_biggest_test.c \
+				03_isprint_smallest_less_one_test.c \
+				04_isprint_biggest_plus_one_test.c
+
+ISPRINT = $(addprefix $(ISPRINT_DIR), $(ISPRINT_NAME))
+ISPRINT_OBJS = $(ISPRINT:.c=.o)
+
 STRLEN_DIR = ./strlen/
 STRLEN_NAME = 00_strlen_launcher.c \
 				01_strlen_basic_test.c \
@@ -81,16 +101,16 @@ STRLEN_OBJS = $(STRLEN:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(STRLEN_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

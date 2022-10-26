@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:24:14 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 20:04:02 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/26 22:15:40 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,7 @@ int	main(void)
 	isalpha_launcher();
 	isdigit_launcher();
 	isalnum_launcher();
+	isascii_launcher();
+	isprint_launcher();
 	strlen_launcher();
 }
