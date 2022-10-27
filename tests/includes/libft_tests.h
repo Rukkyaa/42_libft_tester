@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 22:13:26 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:31:49 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,19 @@ int	isprint_smallest_test(void);
 int	isprint_biggest_test(void);
 int	isprint_smallest_less_one_test(void);
 int	isprint_biggest_plus_one_test(void);
+
+int	atoi_launcher(void);
+int	atoi_only_nb_test(void);
+int	atoi_empty_test(void);
+int	atoi_letter_before_test(void);
+int	atoi_letter_middle_test(void);
+int	atoi_letter_after_test(void);
+int	atoi_letter_only_test(void);
+int	atoi_minus_test(void);
+int	atoi_plus_test(void);
+int	atoi_multiple_sign_test(void);
+int	atoi_zero_test(void);
+int	atoi_int_max_test(void);
+int	atoi_int_min_test(void);
 
 #endif

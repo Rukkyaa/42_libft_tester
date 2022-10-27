@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   10_atoi_zero_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 15:47:34 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 23:10:32 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/27 10:59:34 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/27 23:24:22 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_tests.h"
 
-int	ft_isalnum(int c)
+int	atoi_zero_test(void)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	if (atoi("0") == ft_atoi("0"))
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }

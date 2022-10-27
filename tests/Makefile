@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/26 22:15:26 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/27 23:32:13 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,21 +96,38 @@ STRLEN_NAME = 00_strlen_launcher.c \
 STRLEN = $(addprefix $(STRLEN_DIR), $(STRLEN_NAME))
 STRLEN_OBJS = $(STRLEN:.c=.o)
 
+ATOI_DIR = ./atoi/
+ATOI_NAME = 00_atoi_launcher.c \
+			01_atoi_only_nb_test.c \
+			02_atoi_empty_test.c \
+			03_atoi_letter_before_test.c \
+			04_atoi_letter_middle_test.c \
+			05_atoi_letter_after_test.c \
+			06_atoi_letter_only_test.c \
+			07_atoi_minus_test.c \
+			08_atoi_plus_test.c \
+			09_atoi_multiple_sign_test.c \
+			10_atoi_zero_test.c \
+			11_atoi_int_max_test.c \
+			12_atoi_int_min_test.c
+ATOI = $(addprefix $(ATOI_DIR), $(ATOI_NAME))
+ATOI_OBJS = $(ATOI:.c=.o)
+
 .c.o :
 	$(CC) $(FLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean
