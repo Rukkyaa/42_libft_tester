@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_strchr_launcher.c                               :+:      :+:    :+:   */
+/*   00_strrchr_launcher.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:57:06 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 16:09:40 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/28 16:22:34 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 static void	load_tests(t_unit_test **tests)
 {
-	load_test(tests, "BEGIN          ", &strchr_begin_test);
-	load_test(tests, "MIDDLE         ", &strchr_middle_test);
-	load_test(tests, "END            ", &strchr_end_test);
-	load_test(tests, "ZERO           ", &strchr_zero_test);
-	load_test(tests, "NO OCCURENCE   ", &strchr_no_occurence_test);
-	load_test(tests, "MULTIPLE RESULT", &strchr_multiple_occurence_test);
+	load_test(tests, "BEGIN          ", &strrchr_begin_test);
+	load_test(tests, "MIDDLE         ", &strrchr_middle_test);
+	load_test(tests, "END            ", &strrchr_end_test);
+	load_test(tests, "ZERO           ", &strrchr_zero_test);
+	load_test(tests, "NO OCCURENCE   ", &strrchr_no_occurence_test);
+	load_test(tests, "MULTIPLE RESULT", &strrchr_multiple_occurence_test);
 }
 
-int	strchr_launcher(void)
+int	strrchr_launcher(void)
 {
 	t_unit_test		*tests;
 	unsigned int	res;
 
-	ft_putendl("ft_strchr :");
+	ft_putendl("ft_strrchr :");
 	tests = NULL;
 	load_tests(&tests);
 	res = launch_tests(tests);

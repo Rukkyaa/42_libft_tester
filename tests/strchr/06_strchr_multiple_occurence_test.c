@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchrcopy.c                                    :+:      :+:    :+:   */
+/*   06_strchr_multiple_occurence_test.c                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 15:51:21 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/14 15:51:22 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/28 16:19:59 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_tests.h"
 
-char	*ft_strchr(const char *s, int c)
+int	strchr_multiple_occurence_test(void)
 {
-	while (*s)
-	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s ++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	char const	*str = "SalSut";
+
+	if (ft_strchr("SalSut", 'S') == str)
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }

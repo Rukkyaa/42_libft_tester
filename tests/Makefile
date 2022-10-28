@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/28 15:24:51 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/28 16:24:45 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -124,26 +124,50 @@ STRNCMP_NAME = 00_strncmp_launcher.c \
 			07_strncmp_empty_zero_test.c \
 			08_strncmp_len_less_one_test.c \
 			09_strncmp_superior_test.c \
-			10_strncmp_inferior_test.c \
+			10_strncmp_inferior_test.c
 
 STRNCMP = $(addprefix $(STRNCMP_DIR), $(STRNCMP_NAME))
 STRNCMP_OBJS = $(STRNCMP:.c=.o)
+
+STRCHR_DIR = ./strchr/
+STRCHR_NAME = 00_strchr_launcher.c \
+			01_strchr_begin_test.c \
+			02_strchr_middle_test.c \
+			03_strchr_end_test.c \
+			04_strchr_zero_test.c \
+			05_strchr_no_occurence_test.c \
+			06_strchr_multiple_occurence_test.c
+
+STRCHR = $(addprefix $(STRCHR_DIR), $(STRCHR_NAME))
+STRCHR_OBJS = $(STRCHR:.c=.o)
+
+STRRCHR_DIR = ./strrchr/
+STRRCHR_NAME = 00_strrchr_launcher.c \
+			01_strrchr_begin_test.c \
+			02_strrchr_middle_test.c \
+			03_strrchr_end_test.c \
+			04_strrchr_zero_test.c \
+			05_strrchr_no_occurence_test.c \
+			06_strrchr_multiple_occurence_test.c
+
+STRRCHR = $(addprefix $(STRRCHR_DIR), $(STRRCHR_NAME))
+STRRCHR_OBJS = $(STRRCHR:.c=.o)
 
 .c.o :
 	$(CC) $(FLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

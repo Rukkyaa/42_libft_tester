@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 15:25:05 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/28 16:25:37 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,21 @@ int	strncmp_empty_zero_test(void);
 int	strncmp_len_less_one_test(void);
 int	strncmp_superior_test(void);
 int	strncmp_inferior_test(void);
+
+int	strchr_launcher(void);
+int	strchr_begin_test(void);
+int	strchr_middle_test(void);
+int	strchr_end_test(void);
+int	strchr_zero_test(void);
+int	strchr_no_occurence_test(void);
+int	strchr_multiple_occurence_test(void);
+
+int	strrchr_launcher(void);
+int	strrchr_begin_test(void);
+int	strrchr_middle_test(void);
+int	strrchr_end_test(void);
+int	strrchr_zero_test(void);
+int	strrchr_no_occurence_test(void);
+int	strrchr_multiple_occurence_test(void);
 
 #endif
