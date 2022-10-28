@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_atoi_only_nb_test.c                             :+:      :+:    :+:   */
+/*   06_strncmp_empty_second_zero_test.c                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/27 23:16:04 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/28 15:12:44 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	atoi_only_nb_test(void)
+int	strncmp_empty_second_zero_test(void)
 {
-	if (atoi("42") == ft_atoi("42"))
+	if (ft_strncmp("Salut", "", 0) == 0)
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

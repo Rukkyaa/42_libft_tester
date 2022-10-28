@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/27 23:31:49 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/28 15:25:05 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,17 @@ int	atoi_multiple_sign_test(void);
 int	atoi_zero_test(void);
 int	atoi_int_max_test(void);
 int	atoi_int_min_test(void);
+
+int	strncmp_launcher(void);
+int	strncmp_equal_test(void);
+int	strncmp_empty_first_test(void);
+int	strncmp_empty_second_test(void);
+int	strncmp_empty_test(void);
+int	strncmp_empty_first_zero_test(void);
+int	strncmp_empty_second_zero_test(void);
+int	strncmp_empty_zero_test(void);
+int	strncmp_len_less_one_test(void);
+int	strncmp_superior_test(void);
+int	strncmp_inferior_test(void);
 
 #endif

@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmpcopy.c                                   :+:      :+:    :+:   */
+/*   01_strncmp_equal_test.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/14 16:59:40 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/20 16:11:47 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/28 15:10:21 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_tests.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	strncmp_equal_test(void)
 {
-	size_t	index;
-
-	index = 0;
-	if (n == 0)
-		return (0);
-	while (index < n - 1 && s1[index] && s2[index] && s1[index] == s2[index])
-		index ++;
-	return (s1[index] - s2[index]);
+	if (ft_strncmp("Salut", "Salut", 5) == 0)
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }
