@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_strchr_no_occurence_test.c                      :+:      :+:    :+:   */
+/*   03_tolower_A_less_one_test.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 17:18:28 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/26 15:09:52 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/29 18:48:30 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strchr_no_occurence_test(void)
+int	tolower_A_less_one_test(void)
 {
-	if (ft_strchr("Salut", 'z') == 0)
+	if (ft_tolower('A' - 1) == tolower('A' - 1))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

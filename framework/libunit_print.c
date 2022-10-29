@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:43:53 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 19:29:40 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:37:17 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,6 @@ static void	ft_putnbr(int n)
 	}
 	ft_putchar(nb % 10 + '0');
 }
-
 
 void	print_res(unsigned int res, t_unit_test *tests)
 {

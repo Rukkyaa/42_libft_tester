@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/28 16:24:45 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/29 18:47:06 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,26 @@ ISPRINT_NAME = 00_isprint_launcher.c \
 ISPRINT = $(addprefix $(ISPRINT_DIR), $(ISPRINT_NAME))
 ISPRINT_OBJS = $(ISPRINT:.c=.o)
 
+TOUPPER_DIR = ./toupper/
+TOUPPER_NAME = 00_toupper_launcher.c \
+				01_toupper_a_test.c \
+				02_toupper_z_test.c \
+				03_toupper_a_less_one_test.c \
+				04_toupper_z_plus_one_test.c
+
+TOUPPER = $(addprefix $(TOUPPER_DIR), $(TOUPPER_NAME))
+TOUPPER_OBJS = $(TOUPPER:.c=.o)
+
+TOLOWER_DIR = ./tolower/
+TOLOWER_NAME = 00_tolower_launcher.c \
+				01_tolower_A_test.c \
+				02_tolower_Z_test.c \
+				03_tolower_A_less_one_test.c \
+				04_tolower_Z_plus_one_test.c
+
+TOLOWER = $(addprefix $(TOLOWER_DIR), $(TOLOWER_NAME))
+TOLOWER_OBJS = $(TOLOWER:.c=.o)
+
 STRLEN_DIR = ./strlen/
 STRLEN_NAME = 00_strlen_launcher.c \
 				01_strlen_basic_test.c \
@@ -153,21 +173,36 @@ STRRCHR_NAME = 00_strrchr_launcher.c \
 STRRCHR = $(addprefix $(STRRCHR_DIR), $(STRRCHR_NAME))
 STRRCHR_OBJS = $(STRRCHR:.c=.o)
 
+STRNSTR_DIR = ./strnstr/
+STRNSTR_NAME = 00_strnstr_launcher.c \
+			01_strnstr_equal_test.c \
+			02_strnstr_empty_haystack_test.c \
+			03_strnstr_empty_needle_test.c \
+			04_strnstr_empty_test.c \
+			05_strnstr_equal_zero_test.c \
+			06_strnstr_empty_haystack_zero_test.c \
+			07_strnstr_empty_needle_zero_test.c \
+			08_strnstr_empty_zero_test.c \
+			09_strnstr_len_bigger_test.c \
+
+STRNSTR = $(addprefix $(STRNSTR_DIR), $(STRNSTR_NAME))
+STRNSTR_OBJS = $(STRNSTR:.c=.o)
+
 .c.o :
 	$(CC) $(FLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

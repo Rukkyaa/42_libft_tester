@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:08:54 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/26 12:47:00 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/27 23:37:52 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ typedef struct s_unit_test
 	struct s_unit_test	*next;
 }				t_unit_test;
 
-void			load_test(t_unit_test **tests, char *name, int (*function)(void));
+void			load_test(t_unit_test **tests,
+					char *name, int (*function)(void));
 void			ft_testadd_back(t_unit_test **lst, t_unit_test *new);
 void			ft_print(char *s);
 void			ft_putendl(char *s);

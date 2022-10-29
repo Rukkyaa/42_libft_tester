@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 16:25:37 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/29 18:42:22 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,4 +107,27 @@ int	strrchr_zero_test(void);
 int	strrchr_no_occurence_test(void);
 int	strrchr_multiple_occurence_test(void);
 
+int	strnstr_launcher(void);
+int	strnstr_equal_test(void);
+int	strnstr_empty_haystack_test(void);
+int	strnstr_empty_needle_test(void);
+int	strnstr_empty_test(void);
+int	strnstr_equal_zero_test(void);
+int	strnstr_empty_haystack_zero_test(void);
+int	strnstr_empty_needle_zero_test(void);
+int	strnstr_empty_zero_test(void);
+int	strnstr_len_bigger_test(void);
+
+int	toupper_launcher(void);
+int	toupper_a_test(void);
+int	toupper_z_test(void);
+int	toupper_a_less_one_test(void);
+int	toupper_z_plus_one_test(void);
+
+
+int	tolower_launcher(void);
+int	tolower_A_test(void);
+int	tolower_Z_test(void);
+int	tolower_A_less_one_test(void);
+int	tolower_Z_plus_one_test(void);
 #endif

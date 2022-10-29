@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_strchr_no_occurence_test.c                      :+:      :+:    :+:   */
+/*   05_strnstr_equal_zero_test.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 17:18:28 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/29 18:15:43 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strchr_no_occurence_test(void)
+#include <stdio.h>
+int	strnstr_equal_zero_test(void)
 {
-	if (ft_strchr("Salut", 'z') == 0)
+	char const	*str = "Salut comment tu vas ?";
+
+	if (ft_strnstr(str, str, 0) == 0)
 		return (EXIT_SUCCESS);
+	printf("Result : %s", ft_strnstr(str, str, 0));
 	return (EXIT_FAILURE);
 }
