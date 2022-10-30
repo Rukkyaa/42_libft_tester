@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/29 18:42:22 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/30 11:34:31 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "../libft/libft.h"
 
 # include <ctype.h>
+# include <string.h>
 
 int	strlen_launcher(void);
 int	strlen_basic_test(void);
@@ -130,4 +131,11 @@ int	tolower_A_test(void);
 int	tolower_Z_test(void);
 int	tolower_A_less_one_test(void);
 int	tolower_Z_plus_one_test(void);
+
+int	strlcpy_launcher(void);
+int	strlcpy_zero_test(void);
+int	strlcpy_one_test(void);
+int	strlcpy_len_dest_test(void);
+int	strlcpy_len_dest_plus_one_test(void);
+
 #endif
