@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 13:16:02 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 14:00:49 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,5 +142,10 @@ int	memset_launcher(void);
 int	memset_zero_test(void);
 int	memset_one_test(void);
 int	memset_normal_test(void);
+
+int	bzero_launcher(void);
+int	bzero_zero_test(void);
+int	bzero_one_test(void);
+int	bzero_normal_test(void);
 
 #endif
