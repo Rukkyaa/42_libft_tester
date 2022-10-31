@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   04_strnstr_empty_test.c                            :+:      :+:    :+:   */
+/*   00_memset_launcher.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 12:59:50 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/24 18:57:06 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/31 13:15:39 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strnstr_empty_test(void)
+static void	load_tests(t_unit_test **tests)
 {
-	if (!strcmp(ft_strnstr("", "", 22), ""))
-		return (EXIT_SUCCESS);
-	return (EXIT_FAILURE);
+	load_test(tests, "ZERO        ", &memset_zero_test);
+	load_test(tests, "ONE         ", &memset_one_test);
+	load_test(tests, "NORMAL      ", &memset_normal_test);
+}
+
+int	memset_launcher(void)
+{
+	t_unit_test		*tests;
+	unsigned int	res;
+
+	ft_putendl("ft_memset :");
+	tests = NULL;
+	load_tests(&tests);
+	res = launch_tests(tests);
+	print_res(res, tests);
+	return (res);
 }

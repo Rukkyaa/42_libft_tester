@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/28 16:58:15 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 12:58:48 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	strnstr_empty_needle_test(void)
 {
 	char const	*str = "Salut comment tu vas ?";
 
-	if (ft_strnstr(str, "", 22) == str)
+	if (!strcmp(ft_strnstr(str, "", 22), str))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

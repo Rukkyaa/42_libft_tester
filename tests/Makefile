@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/30 11:35:11 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/31 13:17:34 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -198,21 +198,30 @@ STRLCPY_NAME = 00_strlcpy_launcher.c \
 STRLCPY = $(addprefix $(STRLCPY_DIR), $(STRLCPY_NAME))
 STRLCPY_OBJS = $(STRLCPY:.c=.o)
 
+MEMSET_DIR = ./memset/
+MEMSET_NAME = 00_memset_launcher.c \
+				01_memset_zero_test.c \
+				02_memset_one_test.c \
+				03_memset_normal_test.c
+
+MEMSET = $(addprefix $(MEMSET_DIR), $(MEMSET_NAME))
+MEMSET_OBJS = $(MEMSET:.c=.o)
+
 .c.o :
 	$(CC) $(FLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

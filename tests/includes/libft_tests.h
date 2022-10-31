@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/30 11:34:31 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 13:16:02 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,10 @@ int	strlcpy_zero_test(void);
 int	strlcpy_one_test(void);
 int	strlcpy_len_dest_test(void);
 int	strlcpy_len_dest_plus_one_test(void);
+
+int	memset_launcher(void);
+int	memset_zero_test(void);
+int	memset_one_test(void);
+int	memset_normal_test(void);
 
 #endif
