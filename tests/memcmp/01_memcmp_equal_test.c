@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_strnstr_equal_zero_test.c                       :+:      :+:    :+:   */
+/*   01_memcmp_equal_test.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 14:48:28 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 15:58:45 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strnstr_equal_zero_test(void)
+int	memcmp_equal_test(void)
 {
-	char const	*str = "Salut comment tu vas ?";
-
-	if (ft_strnstr(str, str, 0) == 0)
+	if (ft_memcmp("Salut", "Salut", 5) == 0)
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }
