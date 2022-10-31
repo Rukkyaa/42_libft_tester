@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_strlcpy_one_test.c                              :+:      :+:    :+:   */
+/*   02_tolower_z_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 14:14:51 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/26 15:09:52 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/31 14:19:29 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strlcpy_one_test(void)
+int	tolower_z_test(void)
 {
-	char		*dest;
-	char		*src;
-
-	src = strdup("0000000000");
-	dest = strdup("11111111111111111111");
-	if (ft_strlcpy(dest, src, 1) == strlen(src) && strncmp(src, dest, 1)
-		&& !strncmp(dest + 1, "1111111111111111111", 19) && dest[0] == 0)
+	if (ft_tolower('Z') == tolower('Z'))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

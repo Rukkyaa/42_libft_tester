@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_strlcpy_one_test.c                              :+:      :+:    :+:   */
+/*   03_memcpy_normal_test.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 14:14:51 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 14:21:33 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	strlcpy_one_test(void)
+int	memcpy_normal_test(void)
 {
-	char		*dest;
-	char		*src;
+	char	libft[100];
+	char	real[100];
+	char	src[100];
 
-	src = strdup("0000000000");
-	dest = strdup("11111111111111111111");
-	if (ft_strlcpy(dest, src, 1) == strlen(src) && strncmp(src, dest, 1)
-		&& !strncmp(dest + 1, "1111111111111111111", 19) && dest[0] == 0)
+	bzero(libft, 100);
+	bzero(real, 100);
+	memset(src, '1', 100);
+	ft_memcpy(libft, src, 50);
+	memcpy(real, src, 50);
+	if (!memcmp(libft, real, 100))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

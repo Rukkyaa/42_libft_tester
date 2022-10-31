@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   02_tolower_Z_test.c                                :+:      :+:    :+:   */
+/*   02_memcpy_one_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 15:09:52 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/29 18:40:25 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/10/31 14:08:39 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	tolower_Z_test(void)
+int	memcpy_one_test(void)
 {
-	if (ft_tolower('Z') == tolower('Z'))
+	char	libft[100];
+	char	real[100];
+	char	src[100];
+
+	bzero(libft, 100);
+	bzero(real, 100);
+	memset(src, '1', 100);
+	ft_memcpy(libft, src, 1);
+	memcpy(real, src, 1);
+	if (!memcmp(libft, real, 100))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }

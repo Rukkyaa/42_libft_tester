@@ -6,13 +6,12 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/29 18:15:43 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 14:25:43 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-#include <stdio.h>
 int	strnstr_equal_zero_test(void)
 {
 	char const	*str = "Salut comment tu vas ?";

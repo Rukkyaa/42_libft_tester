@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/10/31 14:02:13 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/10/31 14:17:15 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -100,10 +100,10 @@ TOUPPER_OBJS = $(TOUPPER:.c=.o)
 
 TOLOWER_DIR = ./tolower/
 TOLOWER_NAME = 00_tolower_launcher.c \
-				01_tolower_A_test.c \
-				02_tolower_Z_test.c \
-				03_tolower_A_less_one_test.c \
-				04_tolower_Z_plus_one_test.c
+				01_tolower_a_test.c \
+				02_tolower_z_test.c \
+				03_tolower_a_less_one_test.c \
+				04_tolower_z_plus_one_test.c
 
 TOLOWER = $(addprefix $(TOLOWER_DIR), $(TOLOWER_NAME))
 TOLOWER_OBJS = $(TOLOWER:.c=.o)
@@ -216,21 +216,31 @@ BZERO_NAME = 00_bzero_launcher.c \
 BZERO = $(addprefix $(BZERO_DIR), $(BZERO_NAME))
 BZERO_OBJS = $(BZERO:.c=.o)
 
+MEMCPY_DIR = ./memcpy/
+MEMCPY_NAME = 00_memcpy_launcher.c \
+				01_memcpy_zero_test.c \
+				02_memcpy_one_test.c \
+				03_memcpy_normal_test.c \
+				04_memcpy_full_test.c
+
+MEMCPY = $(addprefix $(MEMCPY_DIR), $(MEMCPY_NAME))
+MEMCPY_OBJS = $(MEMCPY:.c=.o)
+
 .c.o :
 	$(CC) $(FLAGS) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS)
+$(NAME): $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS) $(MEMCPY_OBJS)
 	$(MAKE) -C $(LIB_DIR)
 	$(MAKE) -C $(LIBFT_DIR)
-	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS) $(LIBFT) $(LIB) -o $(NAME)
+	$(CC) $(FLAGS) -I $(INCLUDE) $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS) $(MEMCPY_OBJS) $(LIBFT) $(LIB) -o $(NAME)
 	./$(NAME)
 
 clean:
 	$(MAKE) -C $(LIB_DIR) clean
 	$(MAKE) -C $(LIBFT_DIR) clean
-	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS)
+	rm -f $(OBJS) $(ISALPHA_OBJS) $(ISDIGIT_OBJS) $(ISALNUM_OBJS) $(ISASCII_OBJS) $(ISPRINT_OBJS) $(TOUPPER_OBJS) $(TOLOWER_OBJS) $(STRLEN_OBJS) $(ATOI_OBJS) $(STRNCMP_OBJS) $(STRCHR_OBJS) $(STRRCHR_OBJS) $(STRNSTR_OBJS) $(STRLCPY_OBJS) $(MEMSET_OBJS) $(BZERO_OBJS) $(MEMCPY_OBJS)
 
 fclean: clean
 	$(MAKE) -C $(LIB_DIR) fclean

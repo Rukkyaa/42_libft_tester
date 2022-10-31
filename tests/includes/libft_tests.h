@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 14:00:49 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/10/31 14:16:57 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,12 +125,11 @@ int	toupper_z_test(void);
 int	toupper_a_less_one_test(void);
 int	toupper_z_plus_one_test(void);
 
-
 int	tolower_launcher(void);
-int	tolower_A_test(void);
-int	tolower_Z_test(void);
-int	tolower_A_less_one_test(void);
-int	tolower_Z_plus_one_test(void);
+int	tolower_a_test(void);
+int	tolower_z_test(void);
+int	tolower_a_less_one_test(void);
+int	tolower_z_plus_one_test(void);
 
 int	strlcpy_launcher(void);
 int	strlcpy_zero_test(void);
@@ -148,4 +147,9 @@ int	bzero_zero_test(void);
 int	bzero_one_test(void);
 int	bzero_normal_test(void);
 
+int	memcpy_launcher(void);
+int	memcpy_zero_test(void);
+int	memcpy_one_test(void);
+int	memcpy_normal_test(void);
+int	memcpy_full_test(void);
 #endif
