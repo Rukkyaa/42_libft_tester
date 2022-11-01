@@ -11,8 +11,11 @@ Run the command make
 OK = The test is good ✔️  
 KO = The test is not good ❎  
 SEGV = Segfault error  
-## Tester progress
+## Tester progress 👷
 - [x] Make the unit testing framework
 - [x] Do the tests for the 1st part of the project
 - [ ] Do the tests for the 2nd part of the project
 - [ ] Do the tests for the bonus part of the project
+## Future ideas 🧠
+- [ ] Make a simple display of the results
+- [ ] Detail the tests in a file
