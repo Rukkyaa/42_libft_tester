@@ -6,7 +6,7 @@
 #    By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 17:19:09 by rukkyaa           #+#    #+#              #
-#    Updated: 2022/11/01 13:51:28 by rukkyaa          ###   ########.fr        #
+#    Updated: 2022/11/01 15:50:52 by rukkyaa          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ LIB_DIR = ../framework/
 LIB_NAME = libunit.a
 LIB = $(addprefix $(LIB_DIR), $(LIB_NAME))
 
-LIBFT_DIR = ./libft/
+LIBFT_DIR = ../../libft/
 LIBFT_NAME = libft.a
 LIBFT = $(addprefix $(LIBFT_DIR), $(LIBFT_NAME))
 
