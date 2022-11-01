@@ -12,3 +12,6 @@ OK = The test is good
 KO = The test is not good  
 SEGV = Segfault error  
 ## Tester progress
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
