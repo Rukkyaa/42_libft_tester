@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/31 16:02:56 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/11/01 13:02:10 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,4 +158,9 @@ int	memcmp_equal_test(void);
 int	memcmp_inferior_test(void);
 int	memcmp_superior_test(void);
 int	memcmp_negative_test(void);
+
+int	memmove_launcher(void);
+int	memmove_zero_test(void);
+int	memmove_normal_test(void);
+int	memmove_reverse_test(void);
 #endif

@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   01_memmove_zero_test.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/21 12:51:37 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/10/29 18:19:08 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/11/01 13:09:59 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_tests.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	memmove_zero_test(void)
 {
-	size_t	i;
-	size_t	j;
+	char	libft[100];
+	char	real[100];
+	char	src[100];
 
-	i = 0;
-	if (!(*little))
-		return ((char *)big);
-	while (big[i] && i < len)
-	{
-		j = 0;
-		while (big[i + j] == little[j] && big[i + j] && i + j < len)
-			j ++;
-		if (little[j] == '\0')
-			return ((char *)big + i);
-		i ++;
-	}
-	return (NULL);
+	memset(libft, '0', 100);
+	memset(real, '0', 100);
+	memset(src, '1', 100);
+	if (!memcmp(ft_memmove(libft, src, 0), memmove(real, src, 0), 100))
+		return (EXIT_SUCCESS);
+	return (EXIT_FAILURE);
 }
