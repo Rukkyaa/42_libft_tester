@@ -5,6 +5,10 @@ Unit tester for the first project of school 42, the famous libft project (This t
 ```
 Clone this repository
 Change the LIBFT_PATH variable of the Makefile (/tests/Makefile) to put the path to your libft
-Change the include of the header (/tests/includes/libft_tests.h) to put the path to your libft header
+Change the include of the header (/tests/includes/libft_tests.h) to put the path to your libft .h
 Run the command make
 ```
+## How to read the result ?
+OK = The test is good
+KO = The test is not good
+SEGV = Segfault error
