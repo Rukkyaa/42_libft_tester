@@ -3,7 +3,7 @@ Unit tester for the first project of school 42, the famous libft project (This t
 ## How to run the tester ?
 ```
 Clone this repository
-Change the LIBFT_PATH variable of the Makefile (/tests/Makefile) to put the path to your libft
+Change the LIBFT_DIR variable of the Makefile (/tests/Makefile) to put the path to your libft
 Change the include of the header (/tests/includes/libft_tests.h) to put the path to your libft .h
 Run the command make
 ```
