@@ -8,6 +8,7 @@ Change the include of the header (/tests/includes/libft_tests.h) to put the path
 Run the command make
 ```
 ## How to read the result ?
+![image](https://user-images.githubusercontent.com/56922589/199259761-c9844143-706f-415e-b5c0-24a17d400bd0.png)  
 OK = The test is good ✔️  
 KO = The test is not good ❎  
 SEGV = Segfault error  
@@ -19,3 +20,6 @@ SEGV = Segfault error
 ## Future ideas 🧠
 - [ ] Make a simple display of the results
 - [ ] Detail the tests in a file
+## Bugs / Questions / Contact
+Discord : Rukkyaa#9460  
+42_login : axlamber  
