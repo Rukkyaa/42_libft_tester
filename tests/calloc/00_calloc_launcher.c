@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_memmove_reverse_test.c                          :+:      :+:    :+:   */
+/*   00_calloc_launcher.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/11/01 13:33:42 by rukkyaa          ###   ########.fr       */
+/*   Created: 2022/10/24 18:57:06 by rukkyaa           #+#    #+#             */
+/*   Updated: 2022/11/01 13:39:11 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	memmove_reverse_test(void)
+static void	load_tests(t_unit_test **tests)
 {
-	char	libft[100];
+	load_test(tests, "NORMAL         ", &calloc_normal_test);
+	load_test(tests, "MAX INT        ", &calloc_max_int_test);
+}
 
-	memset(libft, '0', 100);
-	if (!memcmp(memmove(libft + 25, libft, 50),
-			ft_memmove(libft + 25, libft, 50), 100))
-		return (EXIT_SUCCESS);
-	return (EXIT_FAILURE);
+int	calloc_launcher(void)
+{
+	t_unit_test		*tests;
+	unsigned int	res;
+
+	ft_putendl("ft_calloc :");
+	tests = NULL;
+	load_tests(&tests);
+	res = launch_tests(tests);
+	print_res(res, tests);
+	return (res);
 }

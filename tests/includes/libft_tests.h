@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:07:11 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/11/01 13:02:10 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/11/01 13:38:02 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,4 +163,8 @@ int	memmove_launcher(void);
 int	memmove_zero_test(void);
 int	memmove_normal_test(void);
 int	memmove_reverse_test(void);
+
+int	calloc_launcher(void);
+int	calloc_normal_test(void);
+int	calloc_max_int_test(void);
 #endif

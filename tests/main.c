@@ -6,7 +6,7 @@
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:24:14 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/11/01 13:04:02 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/11/01 13:31:38 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,5 @@ int	main(void)
 	memcpy_launcher();
 	memcmp_launcher();
 	memmove_launcher();
+	calloc_launcher();
 }

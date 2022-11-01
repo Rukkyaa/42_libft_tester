@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_memmove_reverse_test.c                          :+:      :+:    :+:   */
+/*   02_calloc_max_int_test.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rukkyaa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:56:10 by rukkyaa           #+#    #+#             */
-/*   Updated: 2022/11/01 13:33:42 by rukkyaa          ###   ########.fr       */
+/*   Updated: 2022/11/01 13:38:46 by rukkyaa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft_tests.h"
 
-int	memmove_reverse_test(void)
+int	calloc_max_int_test(void)
 {
-	char	libft[100];
-
-	memset(libft, '0', 100);
-	if (!memcmp(memmove(libft + 25, libft, 50),
-			ft_memmove(libft + 25, libft, 50), 100))
+	if (!ft_calloc(2147483647, 2147483647))
 		return (EXIT_SUCCESS);
 	return (EXIT_FAILURE);
 }
