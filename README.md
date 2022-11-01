@@ -1,6 +1,5 @@
 # 42_libft_tester
 Unit tester for the first project of school 42, the famous libft project (This tester is still under development)
-
 ## How to run the tester ?
 ```
 Clone this repository
@@ -9,6 +8,7 @@ Change the include of the header (/tests/includes/libft_tests.h) to put the path
 Run the command make
 ```
 ## How to read the result ?
-OK = The test is good
-KO = The test is not good
-SEGV = Segfault error
+OK = The test is good  
+KO = The test is not good  
+SEGV = Segfault error  
+## Tester progress
